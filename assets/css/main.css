@@ -3452,8 +3452,9 @@ input, select, textarea {
 		@media screen and (max-width: 980px) {
 
 			#intro {
-				padding: 4rem 4rem 2rem 4rem ;
-				min-height: 90vh;
+				padding: 6rem 4rem 3rem 4rem ;
+				min-height: 80vh;
+				justify-content: center;
 			}
 
 				#intro p br {
@@ -3475,7 +3476,7 @@ input, select, textarea {
 			}
 
 				#intro h1 {
-					font-size: 3.25rem;
+					font-size: clamp(1.9rem, 8.5vw, 3rem);
 					line-height: 1.1;
 					margin-bottom: 1rem;
 				}
@@ -3490,6 +3491,17 @@ input, select, textarea {
 				}
 
 		}
+
+/* Intro on tall portrait screens (e.g. iPad Pro): keep it from being a full screen of blank space */
+
+	@media screen and (min-width: 981px) and (orientation: portrait) {
+
+		#intro {
+			min-height: 80vh;
+			justify-content: center;
+		}
+
+	}
 
 /* Header */
 
@@ -4242,7 +4254,7 @@ input, select, textarea {
 					-webkit-align-items: center;
 					-ms-align-items: center;
 					align-items: center;
-					padding: 3.15rem 4rem;
+					padding: 1.25rem 4rem;
 				}
 
 					#footer > section.split.contact > section > * {
@@ -4273,11 +4285,11 @@ input, select, textarea {
 					}
 
 					#footer > section.split.contact > section:first-child {
-						padding: 4rem 4rem 3rem 4rem;
+						padding: 3rem 4rem 1.25rem 4rem;
 					}
 
 					#footer > section.split.contact > section:last-child {
-						padding: 3rem 4rem 4rem 4rem;
+						padding: 1.25rem 4rem 3rem 4rem;
 					}
 
 					#footer > section.split.contact > section.alt {
@@ -4324,15 +4336,15 @@ input, select, textarea {
 						}
 
 					#footer > section.split.contact > section {
-						padding: 4rem;
+						padding: 1.5rem 4rem;
 					}
 
 						#footer > section.split.contact > section:first-child {
-							padding: 4rem;
+							padding: 3rem 4rem 1.5rem 4rem;
 						}
 
 						#footer > section.split.contact > section:last-child {
-							padding: 4rem;
+							padding: 1.5rem 4rem 3rem 4rem;
 						}
 
 				#footer form label,
@@ -4362,15 +4374,15 @@ input, select, textarea {
 					}
 
 				#footer > section.split.contact > section {
-					padding: 2rem;
+					padding: 1rem 2rem;
 				}
 
 					#footer > section.split.contact > section:first-child {
-						padding: 2rem;
+						padding: 2rem 2rem 1rem 2rem;
 					}
 
 					#footer > section.split.contact > section:last-child {
-						padding: 2rem;
+						padding: 1rem 2rem 2rem 2rem;
 					}
 
 		}
