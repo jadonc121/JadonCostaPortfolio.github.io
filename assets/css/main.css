@@ -4688,3 +4688,31 @@ input, select, textarea {
 		}
 
 	}
+
+/* Keyboard focus outline: cyan on dark areas, gray on the light content and footer */
+
+	a:focus-visible,
+	button:focus-visible,
+	input:focus-visible,
+	select:focus-visible,
+	textarea:focus-visible {
+		outline: 2px solid #18bfef;
+		outline-offset: 3px;
+	}
+
+	#main a:focus-visible,
+	#main button:focus-visible,
+	#footer a:focus-visible,
+	#footer button:focus-visible {
+		outline-color: #5f666d;
+	}
+
+
+	#nav ul.links li a:focus-visible {
+		outline: 2px solid #18bfef;
+		outline-offset: -4px;
+	}
+
+	#nav ul.links li.active a:focus-visible {
+		outline-color: #5f666d;
+	}
