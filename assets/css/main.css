@@ -4728,3 +4728,43 @@ input, select, textarea {
 	#nav ul.links li.active a:focus-visible {
 		outline-color: #5f666d;
 	}
+
+/* About page name: smaller than the template default */
+
+	#main > .post header.major > h1 {
+		font-size: 3rem;
+	}
+
+	@media screen and (max-width: 736px) {
+
+		#main > .post header.major > h1 {
+			font-size: 2rem;
+		}
+
+	}
+
+/* About page: one degree per line (the template hides <br> in headers on small screens) */
+
+	.degree {
+		display: block;
+	}
+
+/* About page: on phones, stack each skills label above its list */
+
+	@media screen and (max-width: 736px) {
+
+		table.skills tbody tr {
+			display: block;
+			padding: 0.75rem 0;
+		}
+
+		table.skills td {
+			display: block;
+			padding: 0 0.75rem;
+		}
+
+		table.skills td:first-child {
+			margin-bottom: 0.25rem;
+		}
+
+	}
